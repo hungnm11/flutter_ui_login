@@ -54,6 +54,7 @@ class _SignInPageState extends State<SignInPage> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Email',
+                      prefixIcon: Icon(Icons.email),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -76,6 +77,7 @@ class _SignInPageState extends State<SignInPage> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
+                      prefixIcon: Icon(Icons.lock),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
