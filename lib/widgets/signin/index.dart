@@ -13,6 +13,10 @@ class _SignInPageState extends State<SignInPage> {
 
   final _formSignInKey = GlobalKey<FormState>();
 
+  onSignIn(String email, String password) {
+    debugPrint(email);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -104,6 +108,10 @@ class _SignInPageState extends State<SignInPage> {
                       if (_formSignInKey.currentState!.validate()) {
                         // If the form is valid, display a snackbar. In the real world,
                         // you'd often call a server or save the information in a database.
+                        final String email = emailController.text;
+                        final String password = passwordController.text;
+                        onSignIn(email, password);
+
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Processing Data')),
                         );
