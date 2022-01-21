@@ -7,7 +7,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Demo';
+  static const String _title = 'Adstart Media';
 
   // This widget is the root of your application.
   @override
@@ -96,7 +96,7 @@ class _SignInPageState extends State<SignInPage> {
               //     )),
               Container(
                 alignment: Alignment.center,
-                padding: const EdgeInsets.all(50),
+                padding: const EdgeInsets.fromLTRB(70, 0, 70, 20),
                 child: Image.asset('images/black_orange.png'),
               ),
               Container(
