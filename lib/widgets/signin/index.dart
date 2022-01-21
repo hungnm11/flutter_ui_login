@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../services/auth.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -8,6 +9,8 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+  // final Auth auth = Auth();
+
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -15,6 +18,7 @@ class _SignInPageState extends State<SignInPage> {
 
   onSignIn(String email, String password) {
     debugPrint(email);
+    Auth().signIn(email, password);
   }
 
   @override
