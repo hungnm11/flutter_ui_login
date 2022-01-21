@@ -84,16 +84,21 @@ class _SignInPageState extends State<SignInPage> {
           child: ListView(
             shrinkWrap: true,
             children: <Widget>[
+              // Container(
+              //     alignment: Alignment.center,
+              //     padding: const EdgeInsets.all(10),
+              //     child: const Text(
+              //       'Logo Here',
+              //       style: TextStyle(
+              //           color: Colors.blue,
+              //           fontWeight: FontWeight.w500,
+              //           fontSize: 30),
+              //     )),
               Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
-                  child: const Text(
-                    'Logo Here',
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 30),
-                  )),
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(50),
+                child: Image.asset('images/black_orange.png'),
+              ),
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),

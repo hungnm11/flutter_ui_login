@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  amazon_cognito_identity_dart_2: ^1.0.4
 
 dev_dependencies:
   flutter_test:
@@ -56,6 +57,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/images/adstart.svg
+    - assets/images/white_orange.png
+    - assets/images/black_orange.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
