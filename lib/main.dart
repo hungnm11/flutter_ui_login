@@ -63,8 +63,16 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
+
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -95,8 +103,9 @@ class SignInPage extends StatelessWidget {
                   )),
               Container(
                 padding: const EdgeInsets.all(10),
-                child: const TextField(
-                  decoration: InputDecoration(
+                child: TextField(
+                  controller: emailController,
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Email',
                   ),
@@ -104,9 +113,10 @@ class SignInPage extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-                child: const TextField(
+                child: TextField(
                   obscureText: true,
-                  decoration: InputDecoration(
+                  controller: passwordController,
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
                   ),
