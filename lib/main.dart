@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets/signin/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,109 +61,5 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return const Scaffold(body: SignInPage());
-  }
-}
-
-class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
-
-  @override
-  State<SignInPage> createState() => _SignInPageState();
-}
-
-class _SignInPageState extends State<SignInPage> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: Center(
-        child: SizedBox(
-          width: 350,
-          child: ListView(
-            shrinkWrap: true,
-            children: <Widget>[
-              // Container(
-              //     alignment: Alignment.center,
-              //     padding: const EdgeInsets.all(10),
-              //     child: const Text(
-              //       'Logo Here',
-              //       style: TextStyle(
-              //           color: Colors.blue,
-              //           fontWeight: FontWeight.w500,
-              //           fontSize: 30),
-              //     )),
-              Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.fromLTRB(70, 0, 70, 20),
-                child: Image.asset('images/black_orange.png'),
-              ),
-              Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
-                  child: const Text(
-                    'Sign in',
-                    style: TextStyle(fontSize: 20),
-                  )),
-              Container(
-                padding: const EdgeInsets.all(10),
-                child: TextField(
-                  controller: emailController,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Email',
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-                child: TextField(
-                  obscureText: true,
-                  controller: passwordController,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Password',
-                  ),
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  //forgot password screen
-                },
-                child: const Text(
-                  'Forgot Password',
-                ),
-              ),
-              Container(
-                height: 70,
-                padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-                child: ElevatedButton(
-                  child: const Text('Login'),
-                  onPressed: () {
-                    print('object');
-                  },
-                ),
-              ),
-              Row(
-                children: <Widget>[
-                  const Text('Does not have account?'),
-                  TextButton(
-                    child: const Text(
-                      'Sign up',
-                    ),
-                    onPressed: () {
-                      //signup screen
-                    },
-                  )
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
   }
 }
