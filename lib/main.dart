@@ -70,77 +70,83 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10),
-      child: ListView(
-        children: <Widget>[
-          Container(
-              alignment: Alignment.center,
-              padding: const EdgeInsets.all(10),
-              child: const Text(
-                'Logo Here',
-                style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 30),
-              )),
-          Container(
-              alignment: Alignment.center,
-              padding: const EdgeInsets.all(10),
-              child: const Text(
-                'Sign in',
-                style: TextStyle(fontSize: 20),
-              )),
-          Container(
-            padding: const EdgeInsets.all(10),
-            child: const TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Email',
-              ),
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-            child: const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Password',
-              ),
-            ),
-          ),
-          TextButton(
-            onPressed: () {
-              //forgot password screen
-            },
-            child: const Text(
-              'Forgot Password',
-            ),
-          ),
-          Container(
-            height: 70,
-            padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-            child: ElevatedButton(
-              child: const Text('Login'),
-              onPressed: () {
-                print('object');
-              },
-            ),
-          ),
-          Row(
+      child: Center(
+        child: SizedBox(
+          width: 350,
+          child: ListView(
+            shrinkWrap: true,
             children: <Widget>[
-              const Text('Does not have account?'),
-              TextButton(
-                child: const Text(
-                  'Sign up',
+              Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(10),
+                  child: const Text(
+                    'Logo Here',
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 30),
+                  )),
+              Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(10),
+                  child: const Text(
+                    'Sign in',
+                    style: TextStyle(fontSize: 20),
+                  )),
+              Container(
+                padding: const EdgeInsets.all(10),
+                child: const TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Email',
+                  ),
                 ),
+              ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                child: const TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Password',
+                  ),
+                ),
+              ),
+              TextButton(
                 onPressed: () {
-                  //signup screen
+                  //forgot password screen
                 },
-              )
+                child: const Text(
+                  'Forgot Password',
+                ),
+              ),
+              Container(
+                height: 70,
+                padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                child: ElevatedButton(
+                  child: const Text('Login'),
+                  onPressed: () {
+                    print('object');
+                  },
+                ),
+              ),
+              Row(
+                children: <Widget>[
+                  const Text('Does not have account?'),
+                  TextButton(
+                    child: const Text(
+                      'Sign up',
+                    ),
+                    onPressed: () {
+                      //signup screen
+                    },
+                  )
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+              ),
             ],
-            mainAxisAlignment: MainAxisAlignment.center,
           ),
-        ],
+        ),
       ),
     );
   }
